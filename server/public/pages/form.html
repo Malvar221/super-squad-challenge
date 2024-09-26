@@ -6,6 +6,10 @@
     <title>Contact Form</title>
   </head>
   <body>
+    <div class="superTitle">
+    <h1>Super Hero Form</h1>
+    </div>
+    
     <div class="container">
     <div class="info">
       <h1>Super Hero Info</h1>
@@ -31,9 +35,7 @@
       <form id="updateForm">
         <label for="currentName">Current Super Hero name:</label>
         <input type="text" id="currentName" required /><br /><br />
-        <label for="currentEmail"
-          >Current Super Hero secret Identity Email:</label
-        >
+        <label for="currentEmail">Current Super Hero secret Identity Email:</label>
         <input type="email" id="currentEmail" required /><br /><br />
         <label for="newName">New Super Hero name:</label>
         <input type="text" id="newName" required /><br /><br />
@@ -41,6 +43,16 @@
         <input type="email" id="newEmail" required /><br /><br />
         <button type="submit">Update Super Hero</button>
       </form>
+    </div>
+    <div class="delete">
+    <h1>Delete Super Hero</h1>
+    <form id="delete-user">
+      <label for="delete-name">Super Hero Name:</label>
+      <input type="text" id="delete-name" /><br /><br />
+      <label for="delete-email">Super Hero secret Identity Email:</label>
+      <input type="text" id="delete-email" /><br /><br />
+      <button type="submit">Delete Super Hero</button><br /><br />
+    </form>
     </div>
     <div class="show">
       <h1>Show Super Heros</h1>
@@ -58,24 +70,25 @@
     </div>
     <style>
       body {
-        background-color: red;
-        display:inline-flex ;
+        background-image: url("https://wallpapers.com/images/featured/superhero-background-yu6y6uvhq8bbp4so.jpg");
+        background-repeat: no-repeat;
+        color: white;
+      }
+      .superTitle {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
       }
       .container {
-        display: column;
-      }
-      .red {
-        width: 90vh;
-        justify-content: right;
-        display: flex;
-        flex-direction: column;
+       padding-left: 32%;
+        
       }
       .info {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: row;
-        justify-content: flex-start;
-        border: 3px dashed black;
+        display: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex;
+        border: 3px dashed white;
         width: 35vw;
         height: 40vh;
       }
@@ -84,18 +97,27 @@
         align-items: flex-start;
         flex-direction: row;
         justify-content: flex-start;
-        border: 3px dashed black;
+        border: 3px dashed white;
         width: 35vw;
-        height: 40vh;
+        height: 35vh;
+      }
+      .delete {
+        display: flex-end;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: flex;
+        border: 3px dashed white;
+        width: 35vw;
+        height: 25vh;
       }
       .show {
         display: flex;
         align-items: flex-start;
         flex-direction: row;
         justify-content: flex-start;
-        border: 3px dashed black;
+        border: 3px dashed white;
         width: 35vw;
-        height: 40vh;
+        height: fixed;
       }
     </style>
     <script>
@@ -160,11 +182,11 @@
       document.addEventListener("DOMContentLoaded", renderUsers);
     </script>
   </div>
-  <img
+  <!-- <img
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqIwx8VD-2owasOt3_MUlWlnX9U52yXSDAfg&s"
     alt="hero"
     class="red"
-  />
+  /> -->
   
   </body>
 </html>
